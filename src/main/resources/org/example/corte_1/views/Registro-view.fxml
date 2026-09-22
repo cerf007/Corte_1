@@ -10,18 +10,18 @@
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
 
-    <Label fx:id="welcomeText" text="Registro de pacientes">
+    <Label fx:id="lbltitulo" text="Registro de pacientes">
       <font>
          <Font name="Comic Sans MS" size="33.0" />
       </font></Label>
    <Separator prefWidth="200.0" />
    <Label text="Nombres" />
-   <TextField />
+   <TextField fx:id="txtNombres" />
    <Label text="Apellidos" />
-   <TextField />
+   <TextField fx:id="txtApellidos" />
    <Label text="Teléfono" />
-   <TextField />
+   <TextField fx:id="txtTelefono" />
    <Label text="Seleccionar la fecha de su cita" />
-   <DatePicker />
-    <Button onAction="#onHelloButtonClick" text="Enviar" />
+   <DatePicker fx:id="dpFecha" />
+    <Button fx:id="btnEnviar" onAction="#onHelloButtonClick" text="Enviar" />
 </VBox>
