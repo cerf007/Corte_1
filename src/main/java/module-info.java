@@ -5,4 +5,5 @@ module org.example.corte_1 {
 
     opens org.example.corte_1 to javafx.fxml;
     exports org.example.corte_1;
+    exports org.example.corte_1.models;
 }
