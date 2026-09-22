@@ -2,6 +2,7 @@ package org.example.corte_1.models;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import org.example.corte_1.Util.Validaciones;
 
 import java.time.LocalDate;
 
@@ -25,24 +26,6 @@ public final class AgendaCitas {
     }
 
     public static void validarDatos(String nombre, String telefono, LocalDate fecha) {
-        if (nombre == null || nombre.trim().isEmpty()) {
-            throw new IllegalArgumentException("El nombre del paciente es obligatorio.");
-        }
-
-        if (telefono == null || telefono.trim().isEmpty()) {
-            throw new IllegalArgumentException("El telefono del paciente es obligatorio.");
-        }
-
-        if (!telefono.trim().matches("\\d{8}")) {
-            throw new IllegalArgumentException("El telefono debe tener 8 digitos.");
-        }
-
-        if (fecha == null) {
-            throw new IllegalArgumentException("La fecha de la cita es obligatoria.");
-        }
-
-        if (fecha.isBefore(LocalDate.now())) {
-            throw new IllegalArgumentException("La fecha de la cita no puede ser anterior a hoy.");
-        }
+        Validaciones.validarDatosCita(nombre, telefono, fecha);
     }
 }
